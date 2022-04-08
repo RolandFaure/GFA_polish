@@ -1,7 +1,7 @@
 # GFA_polish
 Small repository of command lines to polish a GFA assembly. The idea is just to convert to fasta, polish the fasta and reinject in the GFA.
 
-## Step 1: Convert fasta to GFA
+## Step 1: Convert GFA to fasta
 
 ```bash
 awk '/^S/{printf ">"$2; for (i=4; i<=NF;i++) printf "\t"$i;  printf "\n"$3"\n"}' old_gfa.gfa > unpolished.fasta
